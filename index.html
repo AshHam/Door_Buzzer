@@ -1,0 +1,520 @@
+<!--TODO
+1. Video showing Case being assembeled
+2. Video showing design of PCB mount
+3. Video showing 3d of design
+4. Static image of soldered board for guide
+-->
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title></title>
+
+		<meta name="description" content="The Door Buzzer">
+		<meta name="author" content="Marc Scott">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/Bourne.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<a href="http://www.bourne-grammar.lincs.sch.uk"><img src="images/logo.png"></img></a>
+		<a href="https://github.com/MarcScott/Door_Buzzer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="images/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+		<a href="#/contents"><img style="position: absolute; left: 50%; margin-left: -30px; border: 0;" src="images/home.png" width = "60px" alt="Home"></a>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>The Door Buzzer</h1>
+					<div  style="text-align:center;">
+						<small>Created by <a href="http://coding2learn.org">Marc Scott</a> / <a href="http://twitter.com/coding2learn">@coding2learn</a></small>
+						<small>using <a href="https://github.com/hakimel/reveal.js">reveal.js</a></small>
+					</br><small><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The Door Buzzer</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.coding2learn.org" property="cc:attributionName" rel="cc:attributionURL">Marc Scott</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</small>
+					</div>
+				</section>
+
+				<section id="contents">
+					<h2>CONTENTS</h2>
+					<ol>
+					<li><a href="#/introduction">Introduction</a></li>
+					<li><a href="#/planning">Planning your project</a></li>
+					<li><a href="#/initial">Initial Circuit Ideas</a></li>
+					<li><a href="#/transistors">Transistors</a></li>
+					<li><a href="#/circuit">Circuit Design</a></li>
+					<li><a href="#/pcb">PCB Design</a></li>
+					<li><a href="#/pcb_explain">PCB Testing and Labelling</a></li>
+					<li><a href="#/case">Case Design</a></li>
+					<li><a href="#/drilling">Drilling Guide</a></li>
+					<li><a href="#/soldering">Soldering Guide</a></li>
+					<li><a href="#/assembly">Assembling the Case</a></li>
+					</ol>
+				</section>
+
+				<section id="introduction">
+					<section>
+						<h2>Introduction</h2>
+						<p>You have been asked to design a device that could be hung on a bedroom door, and act as a buzzer for people to request entry to the room. It should be battery powered.</p>
+						<p>Download the portfolio template below. This will allow you to begin to collect research and plan your project.</p>
+						</br><a href="documents/Portfolio.md">Markdown version</a>
+						</br><a href="documents/Portfolio.docx">MS Word version</a>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Research</h2>
+						<p>You should begin by researching the products are already on the market.</p>
+						<p>Click the link below for some ideas of how to research door buzzers.</p>
+						<a href="http://lmgtfy.com/?q=battery+powered+door+buzzer">Research</a></br>
+						<p>Use the information you find to complete the research section of your portfolio.</p>
+					</section>
+				</section>
+
+				<section id="planning"> 
+					<section>
+						<h1>Planning your project</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>The Plan</h2>
+						<p>Engineers need to manage their projects effectively to ensure they produce a finished product on time and on budget.</p>
+						<p>Ask your project manager (teacher) when the deadline is for the project and use the list of tasks below to create a Gantt chart to help guide you throughout.</p>
+						<small>
+							<ul>
+								<li>Door Buzzer Research</li>
+								<li>Transistors Background information</li>
+								<li>The Darlington Pair</li>
+								<li>Circuit Design</li>
+								<li>PCB Design</li>
+								<li>Case Design</li>
+								<li>Drilling the PCB</li>
+								<li>Soldering</li>
+								<li>Case Assembly</li>
+							</ul>
+						</small>
+						
+					</section>
+				</section>
+
+				<section id="Initial">
+					<section>
+						<h1>Initial Circuit Ideas</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Instructions</h2>
+						<p>What follows is a series of videos, detailing how the idea for the circuit was formulated.</p>
+						<p>As you watch the videos, make a few notes so you can add these details to your portfolio.</p>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>A simple circuit idea</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/7bJaldsgpX0" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Using a finger as a switch</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/8RQ8OW8URGE" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Skin resistance</h2>
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/i9KcLE51Oso" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Simulating the skins resistance</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/PnrNlWWpYLs" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Simulating skin resistance in Circuit Wizard</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/GmtJCJtirPc" frameborder="0" allowfullscreen></iframe>
+						
+					</section>
+				</section>
+
+				<section id="transistors">
+					<section>
+						<h1>Transistors</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Instructions</h2>
+						<p>What follows is a series of videos, detailing how transistors can help in our circuit design.</p>
+						<p>As you watch the videos, make a few notes so you can add these details to your portfolio.</p>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>A Single Transistor</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/o1tJPhb_wgc" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>A Darlington Pair</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/K1yMiwya5Fc" frameborder="0" allowfullscreen></iframe>
+					</section>
+				</section>
+
+				<section id="circuit">
+					<section>
+						<h1>Circuit Design</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					
+					<section>
+						<h2>Description</h2>
+						<p>The following slides detail how you should design your Door Buzzer Circuit.</p>
+						<p>The first slide will provide a description, the second and third an image and the last slide will show a video tutorial.</p>
+						<p>You should try and design your circuit first from just the description, and then scroll down to the lower slides if you get stuck.</p>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<ol>
+							<li>Use a 9V battery</li>
+							<li>The 9V rail should be connected to a 9V buzzer that is in series with a transistor. The Emitter of the transistor should be connected to 0V</li>
+							<li>A 330Ω resistor and an LED should be parallel with the buzzer, so that they too feed into the collector of the transistor.</li>
+							<li>A second transistor should be used in series with a 22kΩ resistor. The resistor should connect to the 9V rail, then to the transistor. The emitter of the transistor should feed into the base of the first transistor.</li>
+							<li>The base of the second transistor should be connected to a PTM switch which is fed from the 9V rail.</li>
+						</ol>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Fill in the gaps Circuit</h2>
+						<img src="images/Circuit_diagram_gaps.png">
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>The completed circuit</h2>
+						<img src="images/Circuit_diagram.png" width="500px">
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>The Tutorial</h2>
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/9dsTWo1jzlk" frameborder="0" allowfullscreen></iframe>
+					</section>
+				</section>
+
+				<section id="pcb">
+					<section>
+						<h1>PCB Design</h1>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Designing the PCB</h2>
+						<p>Below are a pair of diagrams showing the completed PCB. You can use these to aid you in your design of the PCB in Circuit Wizard, or skip straight to the tutorial video on the <a href="#/7/4">third slide</a>.</p>
+						<p>Once you have designed the PCB, you'll need to make a few refinements. Watch the tutorial on the <a href="#/7/5">fourth slide</a> to assist you in this.</p>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Normal PCB</h2>
+						<img src="images/Normal_PCB.png">
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Real World PCB</h2>
+						<img src="images/Real_world_PCB.png">
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Tutorial</h2>
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/RRfQGGwzBY8" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Refining the PCB</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/FNrhZkPNEKk" frameborder="0" allowfullscreen></iframe>
+
+					</section>
+				</section>
+
+				<section id="pcb_explain">
+					<section>
+						<h1>Testing and Labelling the PCB</h1>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>What you need to do.</h2>
+						<p>Watch the videos in the next slides.</p>
+						<p><a href="#/8/2">The first</a> will explain how to test if your PCB works or not. Follow the tutorial and take screen shots for your portfolio.</p>
+						<p><a href="#/8/3">The second</a> video will show you how to label your PCB to make the soldering easier.</p>
+					</section>
+					
+					<section>
+						<h2>Testing the PCB</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/9suwaJPFvuw" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+
+					</section>
+
+					<section>
+						<h2>Labelling the PCB</h2>
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/plj68_wQWeU" frameborder="0" allowfullscreen></iframe>
+					</section>
+
+				</section>
+
+				<section id="case">
+					<section>
+						<h1>Case Design</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>The finished product</h2>
+						<p>This is a 3D render of the finished case design. It should give you some idea of what you are aiming for.</p>
+						<img src="images/3D_Case.png" width=500>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>The finished 2D design</h2>
+						<a href="images/Case.png">Download image</a></br>
+						<img src="images/Case.png" width=225>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Illustrator</h2>
+						<small>
+						<p>The following tutorials use Adobe Illustrator to design the case. You can use an alternative program if you like, but the'll be no tutorial.</p>
+						<p>To help you use illustrator, you might find this shortcut sheet helpful.</p>
+						</small>
+						<img src="http://fc03.deviantart.net/fs70/i/2010/348/0/1/illustrator_shortcut_map_by_fiveless-d34wllu.png" width="800px">
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Tutorial List</h2>
+						<ol>
+							<li><a href="">Illustrator setup</a></li>
+							<li><a href="">Drawing the base</a></li>
+							<li><a href="">Drawing the lid</a></li>
+							<li><a href="">Drawing the cutout joins</a></li>
+							<li><a href="">Drawing the edge strip</a></li>
+							<li><a href="">Drawing the PCB mounts</a></li>
+							<li><a href="">3D Visualisation</a></li>
+						</ol>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Illustrator Setup</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/pQ9LwEVHPjM" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Drawing the base</h2>
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/5RqBkfughPM" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Drawing the lid</h2>
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/0X1n_gbSMv0" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Drawing the tabs</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/fBRQal0aWk4" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Drawing the edge strip</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/_TK552Dq7j0" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Drawing the PCB Mounts</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/h03-nW3Gu4o" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Visualising in 3D</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/ETFAGyAcmZ8" frameborder="0" allowfullscreen></iframe>
+					</section>
+
+				</section>
+
+				<section id="drilling">
+					<section>
+						<h1>Drilling your PCB</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>What you'll need to do</h2>
+							<ol>
+								<li>Clean the PCB.</li>
+								<li>Drill the holes (1mm or 3mm)</li>
+								<li>Take pictures for your portfolio</li>
+								<li>Write about what you have achieved at this stage.</li>
+							</ol>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Drilling guide guide</h2>
+						<img src="images/Drilled_board.png">
+					</section>
+				</section>
+
+				<section id="soldering">
+					<section>
+						<h1>Soldering your PCB</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>The finished board.</h2>
+						<p>Below is an image of the soldered PCB. Use this and the videos linked on the next slide to solder the components to the board.</p>
+						<img src="images/soldered_board1.png">
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Components to be soldered</h2>
+						<ul>
+							<li><a href="#/11/3">Resistors</a></li>
+							<li><a href="#/11/4">Transistors</a></li>
+							<li><a href="#/11/5">Buzzer</a></li>
+							<li><a href="#/11/6">Flying Leads</a></li>
+							<li><a href="#/11/7">LED</a></li>
+							<li><a href="#/11/8">Battery Snap</a></li>
+							<li><a href="#/11/9">Contact leads</a></li>
+						</ul>
+						</br><a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Soldering a resistor</h2>
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/Tien3yr1nkw" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#/11/2">BACK</a></br>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Soldering a transistor</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/qeQ9x_7AcJ8" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#/11/2">BACK</a></br>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Soldering a buzzer</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/yz2Ez8m1Wfo" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#/11/2">BACK</a></br>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Soldering flying leads to an LED</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/mWV5fsmwpfw" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#/11/2">BACK</a></br>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Soldering an LED to a board</h2>
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/ccdYzskddSY" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#/11/2">BACK</a></br>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Soldering a battery snap</h2>
+						<iframe width="560" height="315" src="http://www.youtube.com/embed/InYp5r8fZsk" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#/11/2">BACK</a></br>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+
+					<section>
+						<h2>Soldering contact leads</h2>
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/Td1ZRJTxWYE" frameborder="0" allowfullscreen></iframe>
+						</br><a href="#/11/2">BACK</a></br>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+				</section>
+
+				<section id="assembly">
+					<section>
+						<h1>Case Assembly</h1>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Testing the circuit</h2>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Attaching the PCB</h2>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Attaching the contact leads</h2>
+						<a href="#" class="image navigate-down"><img width="45" height="60" src="images/arrow.png" alt="Down arrow"></a>
+					</section>
+					<section>
+						<h2>Assembling the case.</h2>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
